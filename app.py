@@ -32,8 +32,8 @@ sourceurl='https://www.flyingdog.com/beers/'
 '''
 myheading='Coffee Ranking by Origin'
 tabtitle= 'Coffee Ranking by Origin'
-data_coffee = pd.DataFrame(pd.read_csv('C:/Users/macho/Desktop/Coffee_Dashboard_Herkou/arabica_data_cleaned - arabica_data_cleaned.csv'))
-code = pd.DataFrame(pd.read_csv('C:/Users/macho/Desktop/Coffee_Dashboard_Herkou/code.csv'))
+data_coffee = pd.DataFrame(pd.read_csv('C:/Users/macho/Desktop/datasets_coffee/arabica_data_cleaned.csv'))
+code = pd.DataFrame(pd.read_csv('C:/Users/macho/Desktop/datasets_coffee/code.csv'))
 data_coffee= data_coffee.rename(columns={'Country.of.Origin': 'country'})
 data_coffee = pd.merge(data_coffee,code, on= ['country'], how='inner')
 data_coffee = data_coffee.drop([ 'altitude_high_meters','altitude_low_meters', 'unit_of_measurement', 'Certification.Contact','Certification.Address', 'Expiration','Certification.Body','Quakers','Bag.Weight','ICO.Number'], axis=1)
@@ -109,7 +109,7 @@ fig.update_layout(
 )
 
 #########Table
-df = pd.read_csv('C:/Users/macho/Desktop/Coffee_Dashboard_Herkou/table_board.csv')
+df = pd.read_csv('C:/Users/macho/Desktop/datasets_coffee/table_board.csv')
 def generate_table(dataframe, max_rows=10):
     return html.Table([
         html.Thead(
