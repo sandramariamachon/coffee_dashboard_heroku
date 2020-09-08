@@ -310,9 +310,9 @@ content = html.Div(
 )
 
 ########### Initiate the app
-#external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
-#app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
-app = dash.Dash(external_stylesheets=[dbc.themes.SKETCHY])
+external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
+app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
+#app = dash.Dash(external_stylesheets=[dbc.themes.SKETCHY])
 app.layout = html.Div(content)
 server = app.server
 app.title=tabtitle 
