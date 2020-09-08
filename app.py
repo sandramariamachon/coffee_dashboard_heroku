@@ -32,8 +32,8 @@ sourceurl='https://www.flyingdog.com/beers/'
 '''
 myheading='Coffee Ranking by Origin'
 tabtitle= 'Coffee Ranking by Origin'
-data_coffee = pd.DataFrame(pd.read_csv('datasets_coffee/data.csv'))
-code = pd.DataFrame(pd.read_csv('datasets_coffee/code.csv'))
+data_coffee = pd.DataFrame(pd.read_csv('https://raw.githubusercontent.com/sandramariamachon/coffe_dashboard_heroku/master/datasets_coffee/data.csv'))
+code = pd.DataFrame(pd.read_csv('https://raw.githubusercontent.com/sandramariamachon/coffe_dashboard_heroku/master/datasets_coffee/code.csv'))
 data_coffee= data_coffee.rename(columns={'Country.of.Origin': 'country'})
 data_coffee = pd.merge(data_coffee,code, on= ['country'], how='inner')
 data_coffee = data_coffee.drop([ 'altitude_high_meters','altitude_low_meters', 'unit_of_measurement', 'Certification.Contact','Certification.Address', 'Expiration','Certification.Body','Quakers','Bag.Weight','ICO.Number'], axis=1)
@@ -109,7 +109,7 @@ fig.update_layout(
 )
 
 #########Table
-df = pd.read_csv('datasets_coffee/table_board.csv')
+df = pd.read_csv('https://raw.githubusercontent.com/sandramariamachon/coffe_dashboard_heroku/master/datasets_coffee/table_board.csv')
 def generate_table(dataframe, max_rows=10):
     return html.Table([
         html.Thead(
@@ -317,13 +317,7 @@ app.layout = html.Div(content)
 server = app.server
 app.title=tabtitle 
 
-'''
-#style sheets:
- CERULEAN, COSMO, CYBORG, DARKLY,
- FLATLY, JOURNAL, LITERA, LUMEN, LUX,
- MATERIA, MINTY, PULSE, SANDSTONE, SIMPLEX,
- SKETCHY, SLATE, SOLAR, SPACELAB, SUPERHERO, UNITED, YETI
- '''
+
 #############app_callbacks_radar graph
 @app.callback(
     Output('radar_graph', 'figure'),
