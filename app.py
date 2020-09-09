@@ -190,7 +190,7 @@ title1 = dbc.Col([html.H2('The Map of Coffee Origins', style={
 
 map_chart = dbc.Row(
    [
-        dbc.Col(dcc.Graph(id='example-graph-', figure=fig), align='centre')])
+        dbc.Col(dcc.Graph(id='example-graph-', figure=fig), align='centre', sm=12,xs=12)])
 
 title2 = dbc.Col([html.H2('Highest Rated Origins', style={
             'textAlign': 'center','color': '#704510','padding': '40px 10px'})])
@@ -240,22 +240,35 @@ jumbotron = dbc.Jumbotron(
 #title3 = dbc.Col([html.H2('Taste profile by Origin', style={
             #'textAlign': 'center','color': '#704510','padding': '40px 10px'})])
 
-titles= html.Div(
-    dbc.Row(
+#titles= html.Div([
+    #dbc.Row(
+           #dbc.Col(html.Div(html.H2('Taste profile by Origin', style={
+            #'textAlign': 'center','color': '#704510','padding': '40px 10px'})),width=True),
+           # dbc.Col(html.Div(html.H2('Quality Measures Bar Chart', style={
+           # 'textAlign': 'center','color': '#704510','padding': '40px 10px'})),width = True), align="center",)])
+
+
+
+
+dropdown = html.Div([
+dbc.Row(
             [
             dbc.Col(html.Div(html.H2('Taste profile by Origin', style={
-            'textAlign': 'center','color': '#704510','padding': '40px 10px'})),width=True),
+            'textAlign': 'center','color': '#704510','padding': '40px 10px'}))),
             dbc.Col(html.Div(html.H2('Quality Measures Bar Chart', style={
-            'textAlign': 'center','color': '#704510','padding': '40px 10px'})),width = True)], align="center",))
-
-
-
-
-dropdown = html.Div(
-    dbc.Row(
+            'textAlign': 'center','color': '#704510','padding': '40px 10px'})))], justify="center",
+),
+dbc.Row(
             [
             dbc.Col(html.Div(dcc.Dropdown(id='country_name',options=[{'label': i,'value': i} for i in countries],value = 'Hawaii'))),
-            dbc.Col(html.Div(dcc.Dropdown(id='characteristic_name',options=[{'label': i,'value': i} for i in characteristics],value = 'Total Cup Points')))], align="center",))
+            dbc.Col(html.Div(dcc.Dropdown(id='characteristic_name',options=[{'label': i,'value': i} for i in characteristics],value = 'Total Cup Points')))], justify="center",
+),
+dbc.Row(
+            [
+            dbc.Col(html.Div(dcc.Graph(id='radar_graph'))),
+            dbc.Col(html.Div(dcc.Graph(id='taste_graph')))])
+])
+
 
 '''
 controls= dbc.FormGroup(
@@ -266,11 +279,12 @@ controls= dbc.FormGroup(
                 'label': i,
                 'value': i} for i in countries],value = 'Hawaii')])
 '''
-row = html.Div(
-    dbc.Row(
-            [
-            dbc.Col(html.Div(dcc.Graph(id='radar_graph')),width=True),
-            dbc.Col(html.Div(dcc.Graph(id='taste_graph')),width = True)], align="center",))
+#row = html.Div(
+    #dbc.Row(
+            #[
+            #dbc.Col(html.Div(dcc.Graph(id='radar_graph'))),
+            #dbc.Col(html.Div(dcc.Graph(id='taste_graph')))]))
+
 
 #radar_graph = dbc.Row([dbc.Col(dcc.Graph(id='radar_graph'), width={"size": 4, "offset": 3})])
 
@@ -301,10 +315,10 @@ content = html.Div(
         #controls,
         #radar_graph,
         #title4 ,
-        titles,
+        #titles,
         dropdown,
         #taste_graph,
-        row
+        #row
     ],
     style=CONTENT_STYLE
 )
@@ -312,7 +326,7 @@ content = html.Div(
 ########### Initiate the app
 #external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 #app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
-app = dash.Dash(external_stylesheets=[dbc.themes.SKETCHY])
+app = dash.Dash(meta_tags=[{"name": "viewport", "content": "width=device-width, initial-scale=1"}],external_stylesheets=[dbc.themes.SKETCHY])
 app.layout = html.Div(content)
 server = app.server
 app.title=tabtitle 
