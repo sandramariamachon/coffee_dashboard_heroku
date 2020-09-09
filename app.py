@@ -250,23 +250,20 @@ jumbotron = dbc.Jumbotron(
 
 
 
-dropdown = html.Div([
-dbc.Row(
+dropdown = html.Div(
+    [
+        dbc.Row(dbc.Col(html.Div(html.H2('Taste profile by Origin', style={'textAlign': 'center','color': '#704510','padding': '40px 10px'}))),align="center",),
+        dbc.Row(dbc.Col(html.Div(dcc.Dropdown(id='country_name',options=[{'label': i,'value': i} for i in countries],value = 'Hawaii'))),align="center",),
+        dbc.Row(dbc.Col(html.Div(dcc.Graph(id='radar_graph'))),align="center",)
+
+])
+
+row = html.Div(
             [
-            dbc.Col(html.Div(html.H2('Taste profile by Origin', style={
-            'textAlign': 'center','color': '#704510','padding': '40px 10px'}))),
-            dbc.Col(html.Div(html.H2('Quality Measures Bar Chart', style={
-            'textAlign': 'center','color': '#704510','padding': '40px 10px'})))], justify="center",
-),
-dbc.Row(
-            [
-            dbc.Col(html.Div(dcc.Dropdown(id='country_name',options=[{'label': i,'value': i} for i in countries],value = 'Hawaii'))),
-            dbc.Col(html.Div(dcc.Dropdown(id='characteristic_name',options=[{'label': i,'value': i} for i in characteristics],value = 'Total Cup Points')))], justify="center",
-),
-dbc.Row(
-            [
-            dbc.Col(html.Div(dcc.Graph(id='radar_graph'))),
-            dbc.Col(html.Div(dcc.Graph(id='taste_graph')))])
+            dbc.Row(dbc.Col(html.Div(html.H2('Quality Measures Bar Chart', style={'textAlign': 'center','color': '#704510','padding': '40px 10px'}))), align="center",),
+            dbc.Row(dbc.Col(html.Div(dcc.Dropdown(id='characteristic_name',options=[{'label': i,'value': i} for i in characteristics],value = 'Total Cup Points'))), align="center",),
+            dbc.Row(dbc.Col(html.Div(dcc.Graph(id='taste_graph'))), align="center",)
+
 ])
 
 
@@ -318,7 +315,7 @@ content = html.Div(
         #titles,
         dropdown,
         #taste_graph,
-        #row
+        row
     ],
     style=CONTENT_STYLE
 )
