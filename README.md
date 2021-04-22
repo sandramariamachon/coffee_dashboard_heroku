@@ -1,6 +1,6 @@
 # Coffe Ranking Dashboard deployed with Heroku
 
-![coffee_git](https://user-images.githubusercontent.com/55002027/115780080-a56eb680-a3b0-11eb-900d-17df4d606869.png)
+![coffee_git (1)](https://user-images.githubusercontent.com/55002027/115780382-01393f80-a3b1-11eb-8466-0e48d44f470c.png)
 
 
 
