@@ -1,6 +1,7 @@
 # Coffe Ranking Dashboard deployed with Heroku
 
-![screencapture-coffee-dashboard-sandra-herokuapp-2021-04-22-21_03_52](https://user-images.githubusercontent.com/55002027/115779870-66d8fc00-a3b0-11eb-82f5-8c440810a0d7.png)
+![coffee_git](https://user-images.githubusercontent.com/55002027/115780080-a56eb680-a3b0-11eb-900d-17df4d606869.png)
+
 
 
 * You can view the finished app on [Heroku](https://flying-dog.herokuapp.com/).
