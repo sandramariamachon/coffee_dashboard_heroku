@@ -1,4 +1,7 @@
-# How to deploy a simple Plotly Dash app on Heroku
+# Coffe Ranking Dashboard deployed with Heroku
+
+![screencapture-coffee-dashboard-sandra-herokuapp-2021-04-22-21_03_52](https://user-images.githubusercontent.com/55002027/115779870-66d8fc00-a3b0-11eb-82f5-8c440810a0d7.png)
+
 
 * You can view the finished app on [Heroku](https://flying-dog.herokuapp.com/).
 * Take a moment to read my [Medium post about deploying Dash apps](https://medium.com/@austinlasseter/how-to-deploy-a-simple-plotly-dash-app-to-heroku-622a2216eb73).
