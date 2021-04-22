@@ -8,7 +8,7 @@ A simple dashboard visualising coffee taste profiles for all coffee lovers out t
   </a>
 </p>
 
-⚙ The app is written ***Python***. Other tools include ***Pandas*** (for data cleaning/wrangling), ***Plotly*** (for data visualisation) and ***Dash*** (to bulid the web app).
+⚙ The app is in written ***Python***. Other tools include ***Pandas*** (for data cleaning/wrangling), ***Plotly*** (for data visualisation) and ***Dash*** (to bulid the web app).
 
 ## Contents
 In this repository you'll find:
