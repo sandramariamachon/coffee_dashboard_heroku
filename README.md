@@ -1,6 +1,6 @@
 # Coffee Ranking Dashboard hosted on Heroku
 
-A simple dashboard visualising coffee taste profiles for all coffee lovers out there! This dashboard is a synthesis of over 1300 coffee reviews gathered by the Coffee Quality Institute in January 2018. The dasashboard is deployed on [Heroku]() - a container-based cloud Platform as a Service (PaaS). Click [here](https://coffee-dashboard-sandra.herokuapp.com/) to see the dashboard!
+A simple dashboard visualising coffee taste profiles for all coffee lovers out there! This dashboard is a synthesis of over 1300 coffee reviews gathered by the Coffee Quality Institute in January 2018. The dashboard is deployed on [Heroku]() - a container-based cloud Platform as a Service (PaaS). Click [here](https://coffee-dashboard-sandra.herokuapp.com/) to see the dashboard!
 
 <p align="centre">
   <a href="https://coffee-dashboard-sandra.herokuapp.com/" title="Coffee Dashboard">
